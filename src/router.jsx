@@ -1,6 +1,11 @@
+/* eslint-disable react-refresh/only-export-components */
+
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
+
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+const Admin = lazy(() => import('./pages/Admin/Admin'));
 
 export const router = createBrowserRouter([
   {
@@ -9,11 +14,11 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: lazy(() => import('./pages/HomePage/HomePage')),
+        element: <HomePage />,
       },
       {
         path: 'admin',
-        element: lazy(() => import('./pages/Admin/Admin')),
+        element: <Admin />,
       },
     ],
   },
