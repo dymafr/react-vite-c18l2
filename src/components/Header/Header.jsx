@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Header.module.scss';
 import HeaderMenu from './components/HeaderMenu';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import cookchef from "../../assets/images/cookchef.png";
 
 function Header() {
